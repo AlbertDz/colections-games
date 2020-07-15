@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Busca el par de cartas iguales y gana en este divertido juego de memoria">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="apple-mobile-weba-app-capable" content="yes">
+	<meta name="apple-mobile-weba-app-status-bar-style" content="black">
+	<meta name="author" content="Designs Diaz">
+
+	<title>Designs Diaz - Memoria</title>
+
+	<link rel="apple-touch-startup-image" href="../../img/logoDesignsDiaz.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../../img/logoDesignsDiaz.png">
+	<link rel="shortcut icon" type="image/png" href="../../img/logoDesignsDiaz.png">
+	<link rel="apple-touch-icon" sizes="" href="../../img/logoDesignsDiaz.png">
+
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<header class="header">
+		<a href="../../index.html"><img src="../../img/designs-diaz.png"></a>
+		<div class="botones">
+			<!-- <button id="salir" class="boton"><img src="../../img/cerrar.png"></button> -->
+			<button id="about" class="boton">i</button>
+			<div class="about-content">
+				<p>Desarrollado por Designs Diaz</p>
+			</div>
+		</div>
+	</header>
+
+	<div class="content" id="contenido">
+		<h1>MEMORIA</h1>
+		<img id="background-tablero" src="tableros/1.jpg">
+		<div id="tablero"></div>
+	</div>
+
+	<span id="pop-up-fondo">
+		<p id="pop-up-mensaje">
+			¡Felicidades has encontrado todas las parejas!
+			<span id="pop-up-close">x</span>
+		</p>
+	</span>
+
+	<script type="text/javascript" src="js/cartas.js"></script>
+	<script type="text/javascript" src="js/carta.js"></script>
+	<script type="text/javascript" src="js/inicio.js"></script>
+	<!-- <script type="text/javascript" src="../../js/inicio.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,210 @@
+:root {
+	--color-principal: #3586ff;
+}
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body { min-height: 100vh; }
+
+section {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: var(--color-principal);
+	z-index: -1;
+}
+
+section .wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(../img/wave.png);
+	background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+	animation: animate 30s linear infinite;
+	animation-delay: 0s;
+	bottom: 50px;
+	opacity: 1;
+	z-index: 1000;
+}
+section .wave.wave2 {
+	animation: animate2 15s linear infinite;
+	animation-delay: -5s;
+	bottom: 60px;
+	opacity: .5;
+	z-index: 999;
+}
+section .wave.wave3 {
+	animation: animate 20s linear infinite;
+	animation-delay: -2s;
+	bottom: 65px;
+	opacity: .2;
+	z-index: 998;
+}
+section .wave.wave4 {
+	animation: animate2 5s linear infinite;
+	animation-delay: -5s;
+	bottom: 70px;
+	opacity: .7;
+	z-index: 997;
+}
+
+@keyframes animate {
+	0% { background-position-x: 0; }
+	100% { background-position-x: 1000px; }
+}
+@keyframes animate2 {
+	0% { background-position-x: 0; }
+	100% { background-position-x: -1000px; }
+}
+
+#about:hover ~ .about-content { display: block; }
+
+.about-content {
+	background: #fff;
+	border-radius: 8px;
+	bottom: 70px;
+	box-shadow: 0 0 2px .5px var(--color-principal);
+	color: var(--color-principal);
+	display: none;
+	font-size: 12px;
+	font-family: sans-serif;
+	padding: 20px 10px;
+	position: fixed;
+	right: 5px;
+	transition: all .3s ease;
+}
+
+.about-content::before {
+	background: var(--color-principal);
+	bottom: -20px;
+	content: "";
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+	height: 20px;
+	position: absolute;
+	right: 10px;
+	width: 30px;
+}
+
+.botones {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.botones .boton {
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	color: var(--color-principal);
+	display: inline-block;
+	font-family: serif;
+	font-size: 18px;
+	font-weight: bold;
+	height: 40px;
+	margin-left: 5px;
+	outline: none;
+	transition: all .3s ease;
+	width: 40px;
+}
+
+.botones .boton:hover { background-color: rgba(0,0,0,.3); }
+
+.botones .boton img {
+	width: 25px;
+	height: 25px;
+}
+
+.header {
+	align-items: center;
+	background-color: #fff;
+	bottom: 0;
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+	left: 0;
+	padding: 0 10px;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
+.header a {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.header a img { width: 180px; }
+
+.games {
+	text-align: center;
+	padding: 5px;
+	padding-bottom: 50px;
+	position: relative;
+}
+
+.games .game {
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: -1px -1px 2px rgba(0,0,0,.2) inset,
+				2px 2px 5px rgba(0,0,0,.2);
+	color: #fff;
+	display: inline-block;
+	height: 150px;
+	position: relative;
+	text-decoration: none;
+	transition: all .3s ease;
+	width: 150px;
+}
+
+.games .game:hover {
+	box-shadow: -1px -1px 2px rgba(0,0,0,.2) inset,
+				2px 24px 10px rgba(0,0,0,.1);
+	transform: translateY(-20px);
+}
+
+.games .game:before {
+	border: 4px solid var(--color-principal);
+	border-radius: 50%;
+	bottom: 10px;
+	content: "";
+	left: 10px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.games .game:nth-child(1)::before {
+	background: url(../img/memoria.PNG);
+	background-size: 100% 100%;
+}
+
+.logo {
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.logo img {
+	max-width: 300px;
+	width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+	.logo { padding-top: 50px; }
+
+	.logo img { max-width: 450px; 
+}
+
+@media screen and (min-width: 768px) {
+	.logo img { max-width: 500px; 
+}
